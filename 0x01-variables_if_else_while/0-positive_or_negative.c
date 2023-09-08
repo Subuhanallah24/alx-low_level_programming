@@ -2,11 +2,16 @@
 #include <stdlib.h>
 #include <time.h>
 /**more headers goes there */
-/**
- * Main - this is a main and printf function
- * Return: 0
- */
 /** betty style doc for function main goes there */
+
+/**
+ * main - Entry point of the program
+ *
+ * Description: This is the main function where the program starts.
+ * It prints a message to the console.
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	int n;
