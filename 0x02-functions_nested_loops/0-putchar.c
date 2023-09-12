@@ -1,11 +1,6 @@
-#include <unistd.h>
+#include <stdio.h>
+#include "main"
 
-
-int _putchar(char c)
-{
-
-	return write(1, &c, 1);
-}
 /**
  * main - entry point of the program
  *
