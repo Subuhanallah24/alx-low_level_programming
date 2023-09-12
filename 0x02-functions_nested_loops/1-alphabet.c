@@ -18,7 +18,8 @@ int main(void)
 
 void print_alphabet(void)
 {
-	for (char start = 'a' ; start <= 'z'; start++)
+	char start;
+	for (start = 'a' ; start <= 'z'; start++)
 	{
 		_putchar(start);
 	}
