@@ -11,19 +11,16 @@
 int main(void)
 {
 
-	print_alphabet(void);
+	print_alphabet();
 
 	return (0);
 }
 
 void print_alphabet(void)
 {
-	char start = 'a';
-	char end = 'z';
-
-	for (start ; start <= end; start++)
+	for (char start = 'a' ; start <= 'z'; start++)
 	{
-		_putchar('%s', start);
+		_putchar(start);
 	}
 
 }
