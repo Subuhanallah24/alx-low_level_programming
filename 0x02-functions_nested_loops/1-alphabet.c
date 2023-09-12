@@ -1,27 +1,17 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * main - it is the entry point of our pogram
- * it let us make use the  printf function
- * print_alphabet - it print the alphabets in lowercase
- * Return : Always 0 (success)
+ * print_alphabet - Prints the lowercase alphabet followed by a new line
  */
-
-int main(void)
-{
-
-	print_alphabet();
-
-	return (0);
-}
-
 void print_alphabet(void)
 {
-	char start;
-	for (start = 'a' ; start <= 'z'; start++)
-	{
-		_putchar(start);
-	}
+    char letter = 'a';
 
+    while (letter <= 'z')
+    {
+        _putchar(letter);
+        letter++;
+    }
+    _putchar('\n');
 }
+
