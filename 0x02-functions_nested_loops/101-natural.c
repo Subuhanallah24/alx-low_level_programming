@@ -7,18 +7,17 @@
  */
 int main(void)
 {
-    int number;
-    int sum = 0;
+	int number;
+	int sum = 0;
+	for (number = 0; number < 1024; number++)
+	{
+		if (number % 3 == 0 || number % 5 == 0)
+		{
+			sum += number;
+		}
+	}
 
-    for (number = 0; number < 1024; number++)
-    {
-        if (number % 3 == 0 || number % 5 == 0)
-        {
-            sum += number;
-        }
-    }
-
-    printf("%d\n", sum);
-    return (0);
+	printf("%d\n", sum);
+	return (0);
 }
  
