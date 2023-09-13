@@ -3,6 +3,7 @@
 
 int _putchar(char c);
 void times_table(void);
+int add(int, int);
 
 void jack_bauer(void);	
 void print_alphabet(void);
