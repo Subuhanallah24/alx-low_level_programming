@@ -4,7 +4,7 @@
  * add - this function add two numbers together
  *@num1: integer one
  *@num2: integer two
- * Retunrn: return the sum of num1 and num2.
+ * Retunrn: The result (the sum) will be stored in a special box called sum.
  */
 
 int add(int num1, int num2)
