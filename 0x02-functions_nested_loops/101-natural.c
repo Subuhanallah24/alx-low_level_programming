@@ -8,10 +8,13 @@
 int main(void)
 {
 	int number;
+
 	int sum = 0;
+
 	for (number = 0; number < 1024; number++)
+
 	{
-		if (number % 3 == 0 || number % 5 == 0)
+		if (inumber % 3 == 0 || number % 5 == 0)
 		{
 			sum += number;
 		}
@@ -20,4 +23,3 @@ int main(void)
 	printf("%d\n", sum);
 	return (0);
 }
- 
