@@ -10,6 +10,7 @@ void print_numbers(void);
 int _isupper(int c);
 void print_times_table(int n);
 int mul(int a, int b);
+void print_line(int n);
 int add(int, int);
 int _isdigit(int c);
 
