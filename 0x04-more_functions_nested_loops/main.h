@@ -7,6 +7,7 @@ void print_to_98(int n);
 int _isupper(int c);
 void print_times_table(int n);
 int add(int, int);
+int _isdigit(int c);
 
 void jack_bauer(void);	
 void print_alphabet(void);
