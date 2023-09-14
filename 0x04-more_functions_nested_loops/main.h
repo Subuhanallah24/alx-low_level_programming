@@ -5,6 +5,7 @@ int _putchar(char c);
 void times_table(void);
 void print_to_98(int n);
 void print_square(int size);
+void print_triangle(int size);
 void more_numbers(void);
 void print_most_numbers(void);
 void print_numbers(void);
