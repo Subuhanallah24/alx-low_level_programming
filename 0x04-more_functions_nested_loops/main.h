@@ -13,7 +13,7 @@ int mul(int a, int b);
 void print_line(int n);
 int add(int, int);
 int _isdigit(int c);
-vooid print_diagonal(int n);
+void print_diagonal(int n);
 
 void jack_bauer(void);	
 void print_alphabet(void);
