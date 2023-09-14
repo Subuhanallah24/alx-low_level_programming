@@ -1,0 +1,22 @@
+#include "main.h"
+
+/**
+ * print_numbers - Print numbers from 0 to 9
+ *
+ * Description:
+ * This function prints numbers from 0 to 9 followed by a newline character.
+ *
+ * Return:
+ * This function does not return a value (void).
+ */
+
+void print_numbers(void)
+{
+	int  num;
+
+	for (num = 0; num < 10; num++)
+	{
+		_putchar('%d', num);
+	}
+	_putchar('\n');
+}

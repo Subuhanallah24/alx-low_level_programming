@@ -4,6 +4,7 @@
 int _putchar(char c);
 void times_table(void);
 void print_to_98(int n);
+void print_numbers(void);
 int _isupper(int c);
 void print_times_table(int n);
 int mul(int a, int b);
