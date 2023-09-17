@@ -12,22 +12,25 @@
 
 int main(void)
 {
-	int n = 50;
-	int i;
-	unsigned long long first = 1, second = 2;
+	int i = 0;
+	long j = 1, k = 2;
 
-	printf("%llu, %llu", first, second);
-	for (i = 3; i <= n; i++)
+
+	while (i < 50)
 	{
-		unsigned long long next = first + second;
-
-		printf(", %llu", next);
-
-		first = second;
-		second = next;
+	if (i == 0)
+	printf("%ld", j);
+	else if (i == 1)
+	printf(", %ld", k);
+	else
+	{
+	k += j;
+	j = k - j;
+	printf(", %ld", k);
+	}
+	++i;
 	}
 	printf("\n");
-
-
 	return (0);
 }
+
