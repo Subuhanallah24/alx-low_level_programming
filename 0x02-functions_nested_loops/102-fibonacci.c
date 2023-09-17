@@ -13,10 +13,11 @@
 int main(void)
 {
 	int n = 50;
+	int i;
 	unsigned long long first = 1, second = 2;
 
 	printf("%llu, %llu", first, second);
-	for (int i = 3; i <= n; i++)
+	for (i = 3; i <= n; i++)
 	{
 		unsigned long long next = first + second;
 
