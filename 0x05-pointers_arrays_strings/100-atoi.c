@@ -1,41 +1,47 @@
 #include "main.h"
 
 /**
- * _atoi - Converts a string to an integer.
- * @s: The input string.
+ * _atoi - converts a string to an integer
+ * @s: string to be converted
  *
- * Return: The integer value.
+ * Return: the int converted from the string
  */
 int _atoi(char *s)
 {
-	int result = 0;
-	int sign = 1; /* Initialize the sign as positive (1) */
+	int i, d, n, len, f, digit;
 
-	/* Skip leading whitespace characters */
-	while (*s == ' ' || (*s >= 9 && *s <= 13))
-		s++;
+	i = 0;
+	d = 0;
+	n = 0;
+	len = 0;
+	f = 0;
+	digit = 0;
 
-	/* Check for a sign (+ or -) */
-	if (*s == '-')
+	while (s[len] != '\0')
+	len++;
+
+	while (i < len && f == 0)
 	{
-		sign = -1; /* If there's a minus sign, set the sign as negative (-1) */
-		s++;
-	}
-	else if (*s == '+')
-		s++;
+	if (s[i] == '-')
+	++d;
 
-	/* Process the digits to build the integer */
-	while (*s >= '0' && *s <= '9')
+	if (s[i] >= '0' && s[i] <= '9')
 	{
-		/**
-		 * Calculate the new result by multiplying the current result by 10
-		 * and adding the digit at the current position
-		 */
-		result = result * 10 + (*s - '0');
-		s++;
+	digit = s[i] - '0';
+	if (d % 2)
+	digit = -digit;
+	n = n * 10 + digit;
+	f = 1;
+	if (s[i + 1] < '0' || s[i + 1] > '9')
+	break;
+	f = 0;
+	}
+	i++;
 	}
 
-	/* Apply the sign to the result */
-	return (result * sign);
+	if (f == 0)
+	return (0);
+
+	return (n);
 }
 
