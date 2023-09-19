@@ -5,6 +5,7 @@ void reset_to_98(int *n);
 int _putchar(char c);
 void puts_half(char *str);
 void puts2(char *str);
+int _atoi(char *s);
 void rev_string(char *s);
 void print_rev(char *s);
 char *_strcpy(char *dest, char *src);
