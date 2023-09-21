@@ -11,24 +11,21 @@
 
 char *string_toupper(char *string)
 {
-	int i, u, len;
+	int i;
 
 	for (i = 0; string[i] != '\0'; i++)
 	{
-		len = i;
+
 	}
 
-	for (u = 0; u < len; u++)
+	if (string[i] >= 'a' && string[i] <= 'z')
 	{
-		if (string[u] >= 'a' && string[u] <= 'z')
-		{
-			string[u] = string[u] - 32;
-		}
+		string[i] = string[i] - 32;
+	}
 
-		else
-		{
-			string[u]  = string[u];
-		}
+	else
+	{
+		string[i]  = string[i];
 	}
 
 	return (string);
