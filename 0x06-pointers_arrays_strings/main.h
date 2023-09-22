@@ -3,6 +3,7 @@
 
 void reset_to_98(int *n);
 int _putchar(char c);
+void print_buffer(char *b, int size);
 char *rot13(char *);
 char *cap_string(char *);
 void print_number(int n);
