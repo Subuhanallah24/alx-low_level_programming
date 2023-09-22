@@ -21,6 +21,7 @@ int _strlen(char *s);
 void _puts(char *str);
 void print_array(int *a, int n);
 void reverse_array(int *a, int n);
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
 void swap_int(int *a, int *b);
 int _strcmp(char *s1, char *s2);
 
