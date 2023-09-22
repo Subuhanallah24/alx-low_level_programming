@@ -16,16 +16,15 @@ char *string_toupper(char *string)
 	for (i = 0; string[i] != '\0'; i++)
 	{
 
-	}
+		if (string[i] >= 'a' && string[i] <= 'z')
+		{
+			string[i] = string[i] - 32;
+		}
 
-	if (string[i] >= 'a' && string[i] <= 'z')
-	{
-		string[i] = string[i] - 32;
-	}
-
-	else
-	{
-		string[i]  = string[i];
+		else
+		{
+			string[i]  = string[i];
+		}
 	}
 
 	return (string);
