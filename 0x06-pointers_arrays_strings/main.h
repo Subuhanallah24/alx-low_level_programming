@@ -4,6 +4,7 @@
 void reset_to_98(int *n);
 int _putchar(char c);
 char *cap_string(char *);
+char *leet(char *);
 void puts_half(char *str);
 char *string_toupper(char *);
 char *_strncat(char *dest, char *src, int n);
