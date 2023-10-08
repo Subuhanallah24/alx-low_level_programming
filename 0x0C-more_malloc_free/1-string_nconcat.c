@@ -1,59 +1,46 @@
-#include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-
+#include "main.h"
 
 /**
- * string_nconcat - Concatenates two strings with a limit on
+ * *string_nconcat - concatenates n bytes of a string to another string
+ * @s1: string to append to
+ * @s2: string to concatenate from
+ * @n: number of bytes from s2 to concatenate to s1
  *
- * @s1: The first string.
- * @s2: The second string.
- * @n: The maximum number of characters from s2 to concatenate.
- *
- * Return: Pointer to the concatenated string
+ * Return: pointer to the resulting string
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int s1len, s2len, i, j, t;
-	char *point1;
+	char *s;
+	unsigned int i = 0, j = 0, len1 = 0, len2 = 0;
 
-	if (s1 == NULL)
-	{
-		s1 = "";
-	}
+	while (s1 && s1[len1])
+		len1++;
+	while (s2 && s2[len2])
+		len2++;
 
-	if (s2 == NULL)
-	{
-		s2 = "";
-	}
+	if (n < len2)
+		s = malloc(sizeof(char) * (len1 + n + 1));
+	else
+		s = malloc(sizeof(char) * (len1 + len2 + 1));
 
-	s1len = strlen(s1);
-	s2len = strlen(s2);
-
-	if (n >= s2len)
-	{
-		n = s2len;
-	}
-
-	t = s1len + n + 1;
-
-	point1 = malloc(t * sizeof(char));
-
-	if (point1 == NULL)
+	if (!s)
 		return (NULL);
 
-	for (i = 0; i < s1len; i++)
+	while (i < len1)
 	{
-		point1[i] = s1[i];
+		s[i] = s1[i];
+		i++;
 	}
 
-	for (j = 0; j < n; j++)
-		point1[s1len + j] = s2[j];
+	while (n < len2 && i < (len1 + n))
+		s[i++] = s2[j++];
 
-	point1[t] = '\0';
+	while (n >= len2 && i < (len1 + len2))
+		s[i++] = s2[j++];
 
-	return (point1);
+	s[i] = '\0';
 
+	return (s);
 }
+
