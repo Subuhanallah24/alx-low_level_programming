@@ -37,7 +37,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = s2len;
 	}
 
-	t = s1len + n;
+	t = s1len + n + 1;
 
 	point1 = malloc(t * sizeof(char));
 
